@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/aladdin-b2b/static/css/main.80270c26.chunk.css",
+    "main.js": "/aladdin-b2b/static/js/main.a53c659c.chunk.js",
+    "main.js.map": "/aladdin-b2b/static/js/main.a53c659c.chunk.js.map",
+    "runtime-main.js": "/aladdin-b2b/static/js/runtime-main.e2bd207c.js",
+    "runtime-main.js.map": "/aladdin-b2b/static/js/runtime-main.e2bd207c.js.map",
+    "static/js/2.74eb94c1.chunk.js": "/aladdin-b2b/static/js/2.74eb94c1.chunk.js",
+    "static/js/2.74eb94c1.chunk.js.map": "/aladdin-b2b/static/js/2.74eb94c1.chunk.js.map",
+    "static/js/3.d5c09194.chunk.js": "/aladdin-b2b/static/js/3.d5c09194.chunk.js",
+    "static/js/3.d5c09194.chunk.js.map": "/aladdin-b2b/static/js/3.d5c09194.chunk.js.map",
+    "index.html": "/aladdin-b2b/index.html",
+    "static/css/main.80270c26.chunk.css.map": "/aladdin-b2b/static/css/main.80270c26.chunk.css.map",
+    "static/js/2.74eb94c1.chunk.js.LICENSE.txt": "/aladdin-b2b/static/js/2.74eb94c1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2bd207c.js",
+    "static/js/2.74eb94c1.chunk.js",
+    "static/css/main.80270c26.chunk.css",
+    "static/js/main.a53c659c.chunk.js"
+  ]
+}
