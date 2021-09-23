@@ -1,4 +1,4 @@
-import {  FormGroup, FormControlLabel, Checkbox, Box, Tabs, Tab, InputBase, IconButton } from "@material-ui/core";
+import { FormGroup, FormControlLabel, Checkbox, Box, Tabs, Tab, InputBase, IconButton } from "@material-ui/core";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import MainCategory from "./MainCategory";
@@ -15,6 +15,13 @@ const Categories = () => {
   const [activeSubcatID, setActiveSubcatID] = useState(null);
   const [lastCategories, setLastCategories] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const [selected, setSelected] = useState([
+    "Industrial Equipment & Tools • Mining and well drilling machinery accessories • Well drilling and operation equipment • Agricultural machinery for harvesting • Sprayers ",
+    "Industrial Equipment & Tools  •  Mining and well drilling machinery accessories  •  Well drilling and operation equipment  •  Poultry and livestock equipment  •  Milking machines",
+    "Industrial Equipment & Tools  •  Mining and well drilling machinery accessories  •  Well drilling and operation equipment  •  Poultry and livestock equipment  •  Incubators or brooders for poultry",
+    "Industrial Equipment & Tools  •  Mining and well drilling machinery accessories  •  Well drilling and operation equipment  •  Poultry and livestock equipment  •  Livestock identification equipment"
+  ])
 
   useEffect(() => {
     axios.get(`${API.baseUrl}Articles/`)
@@ -55,7 +62,7 @@ const Categories = () => {
   }
 
 
-  
+
   useEffect(() => {
     // only run when the subcateg fires
     if (activeSubcatID) {
@@ -177,9 +184,28 @@ const Categories = () => {
 
                 <Loader loading={loading} />
               </article>
+
+
             </section>
 
           }
+
+          <section className="selected-categories">
+            <div className="selected-categories-title">Selected categories</div>
+
+
+            <ul className="selected-categories-wrapper">
+              {
+                selected && selected.map((selectedItem, selectedIndex) => (
+                  <li key={selectedIndex}><span>{selectedItem}</span> <IconButton><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                  </svg></IconButton></li>
+                ))
+              }
+
+            </ul>
+          </section>
 
         </TabPanel>
         <TabPanel
