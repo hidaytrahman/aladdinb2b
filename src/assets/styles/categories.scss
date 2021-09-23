@@ -78,3 +78,39 @@
         }
     }
 }
+
+// search and tab styling as per wireframe
+.main-section {
+
+    .MuiTab-root {
+        max-width: none;
+        width: 36%;
+    }
+
+    .MuiTabs-flexContainer {
+        border-bottom: 2px solid #CED6E0;
+    }
+
+    .MuiInputBase-input {
+        border: 1px solid #ced6e0;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+    }
+
+    .search-area {
+        position: relative;
+        margin: 2rem 0;
+
+        .MuiInputBase-root {
+            display: flex;
+        }
+
+        .search-button {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+
+}
