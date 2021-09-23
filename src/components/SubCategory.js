@@ -1,11 +1,10 @@
+import { memo, useEffect, useState } from "react";
 import { Checkbox, FormControlLabel, FormGroup } from "@material-ui/core";
 import axios from "axios";
-import { useEffect, useState } from "react";
 import { API } from "../core/constant";
-import useAPI from "../core/customHooks/useAPI";
+
 const SubCategory = ({ artId, setActiveSubcatID }) => {
     const [subCategories, setSubCategories] = useState([]);
-
     useEffect(() => {
         axios.get(`${API.baseUrl}Articles/${artId}`)
             .then(function (response) {
@@ -45,4 +44,4 @@ const SubCategory = ({ artId, setActiveSubcatID }) => {
 
 }
 
-export default SubCategory;
+export default memo(SubCategory);
